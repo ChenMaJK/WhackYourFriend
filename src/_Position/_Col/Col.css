@@ -1,0 +1,365 @@
+.col{
+    width: 0;
+    word-break: break-all ;
+}
+
+.offset_0  { margin-left: 0.000%  ;}
+.offset_1  { margin-left: 8.333%  ;}
+.offset_2  { margin-left: 16.66%  ;}
+.offset_3  { margin-left: 25.00%  ;}
+.offset_4  { margin-left: 33.33%  ;}
+.offset_5  { margin-left: 41.66%  ;}
+.offset_6  { margin-left: 50.00%  ;}
+.offset_7  { margin-left: 58.33%  ;}
+.offset_8  { margin-left: 66.66%  ;}
+.offset_9  { margin-left: 75.00%  ;}
+.offset_10 { margin-left: 83.33%  ;}
+.offset_11 { margin-left: 91.66%  ;}
+.offset_12 { margin-left: 100.0%  ;}
+
+
+.xs_1  { 
+    -ms-flex:           0 0 8.333%;    /* IE 10 */  
+    -moz-box-flex:      0 0 8.333%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 8.333%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 8.333%;    /* Chrome */  
+    flex: 0 0 8.333%  ;
+}
+.xs_2  {
+    -ms-flex:           0 0 16.66%;    /* IE 10 */  
+    -moz-box-flex:      0 0 16.66%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 16.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 16.66%;    /* Chrome */  
+    flex: 0 0 16.66%  ;
+}
+.xs_3  { 
+    -ms-flex:           0 0 25.00%;    /* IE 10 */  
+    -moz-box-flex:      0 0 25.00%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 25.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 25.00%;    /* Chrome */  
+    flex: 0 0 25.00%  ;
+}
+.xs_4  { 
+    -ms-flex:           0 0 33.33%;    /* IE 10 */  
+    -moz-box-flex:      0 0 33.33%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 33.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 33.33%;    /* Chrome */  
+    flex: 0 0 33.33%  ;
+}
+.xs_5  { 
+    -ms-flex:           0 0 41.66%;    /* IE 10 */  
+    -moz-box-flex:      0 0 41.66%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 41.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 41.66%;    /* Chrome */  
+    flex: 0 0 41.66%  ;
+}
+.xs_6  { 
+    -ms-flex:           0 0 50.00%;    /* IE 10 */  
+    -moz-box-flex:      0 0 50.00%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 50.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 50.00%;    /* Chrome */  
+    flex: 0 0 50.00%  ;
+}
+.xs_7  { 
+    -ms-flex:           0 0 58.33%;    /* IE 10 */  
+    -moz-box-flex:      0 0 58.33%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 58.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 58.33%;    /* Chrome */  
+    flex: 0 0 58.33%  ;
+}
+.xs_8  { 
+    -ms-flex:           0 0 66.66%;    /* IE 10 */  
+    -moz-box-flex:      0 0 66.66%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 66.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 66.66%;    /* Chrome */  
+    flex: 0 0 66.66%  ;
+}
+.xs_9  { 
+    -ms-flex:           0 0 75.00%;    /* IE 10 */  
+    -moz-box-flex:      0 0 75.00%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 75.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 75.00%;    /* Chrome */  
+    flex: 0 0 75.00%  ;
+}
+.xs_10 { 
+    -ms-flex:           0 0 83.33%;    /* IE 10 */  
+    -moz-box-flex:      0 0 83.33%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 83.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 83.33%;    /* Chrome */  
+    flex: 0 0 83.33%  ;
+}
+.xs_11 { 
+    -ms-flex:           0 0 91.66%;    /* IE 10 */  
+    -moz-box-flex:      0 0 91.66%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 91.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 91.66%;    /* Chrome */  
+    flex: 0 0 91.66%  ;
+}
+.xs_12 { 
+    -ms-flex:           0 0 100.0%;    /* IE 10 */  
+    -moz-box-flex:      0 0 100.0%;    /* OLD - Firefox 19- */           
+    -webkit-box-flex:   0 0 100.0%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+    -webkit-flex:       0 0 100.0%;    /* Chrome */  
+    flex: 0 0 100.0%  ;
+}
+
+@media screen and (min-width: 768px){
+
+    .sm_1  {
+        -ms-flex:           0 0 8.333%;    /* IE 10 */  
+        -moz-box-flex:      0 0 8.333%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 8.333%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 8.333%;    /* Chrome */  
+        flex: 0 0 8.333%  ;
+    }
+    .sm_2  {
+        -ms-flex:           0 0 16.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 16.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 16.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 16.66%;    /* Chrome */  
+        flex: 0 0 16.66%  ;
+    }
+    .sm_3  {
+        -ms-flex:           0 0 25.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 25.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 25.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 25.00%;    /* Chrome */  
+        flex: 0 0 25.00%  ;
+    }
+    .sm_4  {
+        -ms-flex:           0 0 33.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 33.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 33.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 33.33%;    /* Chrome */  
+        flex: 0 0 33.33%  ;
+    }
+    .sm_5  {
+        -ms-flex:           0 0 41.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 41.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 41.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 41.66%;    /* Chrome */  
+        flex: 0 0 41.66%  ;
+    }
+    .sm_6  {
+        -ms-flex:           0 0 50.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 50.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 50.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 50.00%;    /* Chrome */  
+        flex: 0 0 50.00%  ;
+    }
+    .sm_7  {
+        -ms-flex:           0 0 58.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 58.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 58.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 58.33%;    /* Chrome */  
+        flex: 0 0 58.33%  ;
+    }
+    .sm_8  {
+        -ms-flex:           0 0 66.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 66.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 66.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 66.66%;    /* Chrome */  
+        flex: 0 0 66.66%  ;
+    }
+    .sm_9  {
+        -ms-flex:           0 0 75.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 75.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 75.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 75.00%;    /* Chrome */  
+        flex: 0 0 75.00%  ;
+    }
+    .sm_10 {
+        -ms-flex:           0 0 83.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 83.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 83.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 83.33%;    /* Chrome */  
+        flex: 0 0 83.33%  ;
+    } 
+    .sm_11 {
+        -ms-flex:           0 0 91.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 91.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 91.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 91.66%;    /* Chrome */  
+         flex: 0 0 91.66%  ;
+    }
+    .sm_12 {
+        -ms-flex:           0 0 100.0%;    /* IE 10 */  
+        -moz-box-flex:      0 0 100.0%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 100.0%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 100.0%;    /* Chrome */  
+        flex: 0 0 100.0%  ;
+    }
+}
+@media screen and (min-width: 992px){
+    .md_1  {
+        -ms-flex:           0 0 8.333%;    /* IE 10 */  
+        -moz-box-flex:      0 0 8.333%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 8.333%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 8.333%;    /* Chrome */  
+        flex: 0 0 8.333%  ;
+    }
+    .md_2  {
+        -ms-flex:           0 0 16.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 16.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 16.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 16.66%;    /* Chrome */  
+        flex: 0 0 16.66%  ;
+    }
+    .md_3  {
+        -ms-flex:           0 0 25.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 25.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 25.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 25.00%;    /* Chrome */  
+        flex: 0 0 25.00%  ;
+    }
+    .md_4  {
+        -ms-flex:           0 0 33.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 33.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 33.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 33.33%;    /* Chrome */  
+        flex: 0 0 33.33%  ;
+    }
+    .md_5  {
+        -ms-flex:           0 0 41.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 41.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 41.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 41.66%;    /* Chrome */  
+        flex: 0 0 41.66%  ;
+    }
+    .md_6  {
+        -ms-flex:           0 0 50.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 50.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 50.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 50.00%;    /* Chrome */  
+        flex: 0 0 50.00%  ;
+    }
+    .md_7  {
+        -ms-flex:           0 0 58.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 58.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 58.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 58.33%;    /* Chrome */  
+        flex: 0 0 58.33%  ;
+    }
+    .md_8  {
+        -ms-flex:           0 0 66.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 66.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 66.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 66.66%;    /* Chrome */  
+        flex: 0 0 66.66%  ;
+    }
+    .md_9  {
+        -ms-flex:           0 0 75.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 75.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 75.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 75.00%;    /* Chrome */  
+        flex: 0 0 75.00%  ;
+    }
+    .md_10 {
+        -ms-flex:           0 0 83.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 83.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 83.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 83.33%;    /* Chrome */  
+        flex: 0 0 83.33%  ;
+    }
+    .md_11 {
+        -ms-flex:           0 0 91.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 91.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 91.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 91.66%;    /* Chrome */  
+        flex: 0 0 91.66%  ;
+    }
+    .md_12 {
+        -ms-flex:           0 0 100.0%;    /* IE 10 */  
+        -moz-box-flex:      0 0 100.0%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 100.0%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 100.0%;    /* Chrome */  
+        flex: 0 0 100.0%  ;
+    }
+
+}
+@media screen and (min-width: 1200px){
+    .lg_1  {
+        -ms-flex:           0 0 8.333%;    /* IE 10 */  
+        -moz-box-flex:      0 0 8.333%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 8.333%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 8.333%;    /* Chrome */  
+        flex: 0 0 8.333%  ;
+    }
+    .lg_2  {
+        -ms-flex:           0 0 16.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 16.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 16.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 16.66%;    /* Chrome */  
+        flex: 0 0 16.66%  ;
+    }
+    .lg_3  {
+        -ms-flex:           0 0 25.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 25.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 25.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 25.00%;    /* Chrome */  
+        flex: 0 0 25.00%  ;
+    }
+    .lg_4  {
+        -ms-flex:           0 0 33.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 33.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 33.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 33.33%;    /* Chrome */  
+        flex: 0 0 33.33%  ;
+    }
+    .lg_5  {
+        -ms-flex:           0 0 41.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 41.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 41.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 41.66%;    /* Chrome */  
+        flex: 0 0 41.66%  ;
+    }
+    .lg_6  {
+        -ms-flex:           0 0 50.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 50.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 50.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 50.00%;    /* Chrome */  
+        flex: 0 0 50.00%  ;
+    }
+    .lg_7  {
+        -ms-flex:           0 0 58.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 58.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 58.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 58.33%;    /* Chrome */  
+        flex: 0 0 58.33%  ;
+    }
+    .lg_8  {
+        -ms-flex:           0 0 66.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 66.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 66.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 66.66%;    /* Chrome */  
+        flex: 0 0 66.66%  ;
+    }
+    .lg_9  {
+        -ms-flex:           0 0 75.00%;    /* IE 10 */  
+        -moz-box-flex:      0 0 75.00%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 75.00%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 75.00%;    /* Chrome */  
+        flex: 0 0 75.00%  ;
+    }
+    .lg_10 {
+        -ms-flex:           0 0 83.33%;    /* IE 10 */  
+        -moz-box-flex:      0 0 83.33%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 83.33%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 83.33%;    /* Chrome */  
+        flex: 0 0 83.33%  ;
+    }
+    .lg_11 {
+        -ms-flex:           0 0 91.66%;    /* IE 10 */  
+        -moz-box-flex:      0 0 91.66%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 91.66%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 91.66%;    /* Chrome */  
+        flex: 0 0 91.66%  ;
+    }
+    .lg_12 {
+        -ms-flex:           0 0 100.0%;    /* IE 10 */  
+        -moz-box-flex:      0 0 100.0%;    /* OLD - Firefox 19- */           
+        -webkit-box-flex:   0 0 100.0%;    /* OLD - iOS 6-, Safari 3.1-6 */  
+        -webkit-flex:       0 0 100.0%;    /* Chrome */  
+        flex: 0 0 100.0%  ;
+    }
+}

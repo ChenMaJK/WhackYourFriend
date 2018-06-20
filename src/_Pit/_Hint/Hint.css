@@ -1,0 +1,13 @@
+.hint{
+    position: absolute;
+    top:-30px;
+    width: 100px;
+    height: 30px;
+    background: red;
+}
+.yes{
+    display: block;
+}
+.no{
+    display: none;
+}
