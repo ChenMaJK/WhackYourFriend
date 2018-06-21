@@ -9,8 +9,14 @@ import React from 'react';
 import { render } from 'react-dom';
 import Col from '../src/_Position/_Col/Col';
 import Row from '../src/_Position/_Row/Row';
-import Pit from '../src/_Pit/Pit';
-import PitArea from '../src/_Pit/_PitArea/PitArea';
+
+
+import PitArea from '../src/_PitArea/PitArea';
+import Score from '../src/_PitArea/_Score/Score';
+
+import Pit from '../src/_PitArea/_Pit/Pit';
+import Button from '../src/_PitArea/_Button/Button';
+
 render(
     <div >
         <Row>

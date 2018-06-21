@@ -1,0 +1,6 @@
+.pitArea{
+    flex-flow: row wrap;
+    box-sizing: border-box;
+    border:solid  black 10px;
+    margin-top: 50px;
+}
