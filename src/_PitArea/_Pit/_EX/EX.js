@@ -1,25 +1,51 @@
 import React, { Component } from 'react';
 import css from './EX.css';
 import { clearInterval,setTimeout, setInterval } from 'timers';
+// import man from './man.jpg';
 
 let interval;
 export default class EX extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isShowEX:0
+            isShowEX:0,
+            speed:2000
         }
 
         setTimeout(()=>{this.random()},0);
-        // this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this)
+    }
+    changeSpeed(flag){
+        if(this.state.speed-flag*500>0){
+            this.setState({
+                speed: this.state.speed-flag*300
+            })
+        }
+
+    }
+    handleClick(e){
+        e.preventDefault();
+
+        if(this.state.isShowEX){
+            this.props.addScore();
+            this.props.showHint();
+        }else{
+            this.props.loseLife();
+        }
+    }
+    render() {
+        return (
+            <img
+            // src={man}
+            class ={"ex _"+this.state.isShowEX} 
+            onClick={(e) => this.handleClick(e)}
+            />
+        );
     }
     random(){
-        setInterval(()=>{
+        interval = setInterval(()=>{
             if(this.props.isBegin){
-                console.log("im random");
                 let randomNum = Math.floor(Math.random()*10+1);
                 if(randomNum==6){
-                    console.log("im ss");
                     this.setState({
                         isShowEX: 2
                     });
@@ -27,25 +53,11 @@ export default class EX extends Component {
                         this.setState({
                             isShowEX: 0
                         });
-                    },800)
+                    },this.state.speed)
                 }
             }else{
                 return;
             }
         },1000);
-    }
-    checkEX(){
-        return this.state.isShowEX;
-    }
-    render() {
-        return (
-                <div 
-                    class ={"ex _"+this.state.isShowEX} 
-                    // class="ex _2"
-                >
-                123
-                </div>
-
-        );
     }
 }

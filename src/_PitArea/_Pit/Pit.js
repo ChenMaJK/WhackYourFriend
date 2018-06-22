@@ -8,36 +8,30 @@ export default class Pit extends Component {
     constructor(props){
         super(props);
         this.state={
-            isHint:"no",
+            isShowHint:"no",
         }
     }
-    handleClick(e){
-        e.preventDefault();
-
-        if(this.refs["ex"].checkEX()){
-            this.props.addScore();
-            this.setState({
-                isHint:"yes"
-            })
-            setTimeout(()=>this.setState({
-                isHint:"no"
-            }),1000)
-        }else{
-            this.props.loseLife();
-        }
+    showHint(){
+        this.refs.hint.showHint();
+    }
+    changeSpeed(flag){
+        this.refs.ex.changeSpeed(flag);
     }
     render() {
         return (
             <div class="pitBox">
-                <Hint visible={this.state.isHint}/>
-                <div 
-                    class="pit"  
-                    onClick={(e) => this.handleClick(e)}
-                >
-                    <EX isBegin={this.props.isBegin} ref="ex"></EX>
-                    <img class="pitImg" src="./assert/pit.png"/>
-                </div>
+                <Hint ref="hint"/>
+                <EX 
+                    ref="ex" 
+                    isBegin={this.props.isBegin} 
+                    addScore = {()=>{this.props.addScore();this.changeSpeed(1)}}
+                    loseLife = {()=>{this.props.loseLife();this.changeSpeed(-1)}}
+                    showHint = {()=>{this.showHint()}}
+                    socre = {this.props.score}
+                />
+                <img class="pitImg" src="./assert/pit.png"/>
             </div>
+
         );
     }
 }

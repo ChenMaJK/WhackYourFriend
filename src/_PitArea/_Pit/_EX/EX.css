@@ -1,11 +1,14 @@
 .ex{
-    flex:auto;
-    background: rgb(255, 255, 255);
+
+    width: 100%;
+    padding-top: 100%;
+    align-self: flex-start;
 }
 ._0{
     background: rgb(255, 255, 255);
 }
 ._2{
-    background: red;
-
+    /* background: red; */
+    background: url("./man.jpg") no-repeat center;
+    background-size: auto 100%;
 }

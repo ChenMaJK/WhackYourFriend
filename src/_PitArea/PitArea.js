@@ -37,76 +37,160 @@ export default class PitArea extends Component {
         alert("begin");
         this.setState({
             isBegin:1,
-            life:3
+            life:3,
+            score:0
         })
     }
     end(){
         alert("end");
-        this.setState({isBegin:0})
+        this.setState({
+            isBegin:0,
+            life:0,
+            score:0
+        })
+    }
+    readImg(){
+        let url ;
+
+        var preview = document.querySelector('img');
+        var file    = document.querySelector('input[type=file]').files[0];
+        var reader  = new FileReader();
+      
+        reader.addEventListener("load", function () {
+          preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            url = reader.readAsDataURL(file);
+        }
+      
+        // $('#picture').faceDetection({
+        //     complete: function (faces) {
+        //         console.log(faces);
+        //     }
+        // });
     }
     render() {
         return (
-            <div  class="pitArea">
-                isBegin:{this.state.isBegin}
-                leftLife:{this.state.life}
+            <div >
+                <Row>
+                    <img id="picture" src=""/>>
+                    <Col width="6" >
+                        isBegin:{this.state.isBegin}
+                    </Col>
+                    <Col width="6" >
+                        leftLife:{this.state.life}
+                    </Col>
+                </Row>
                 <Row>
                     <Col width="4" >
                         score:{this.state.score}
                     </Col>
-                    <Col width="4" >
+                    <Col width="8" >
                         <Button click={()=>{this.begin()}}>开始</Button>
-                    </Col>
-                    <Col width="4" >
                         <Button click={()=>{this.end()}}>停止</Button>
+                        <input id="imageReader"type="file" onChange={()=>{this.readImg()}}/>   
+        
                     </Col>
                 </Row>
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
-                <Pit 
-                    isBegin={this.state.isBegin} 
-                    addScore = {()=>{this.addScore()}}
-                    loseLife = {()=>{this.loseLife()}}
-                />
+                <div class="pitArea">
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                    <Pit 
+                        isBegin={this.state.isBegin} 
+                        addScore = {()=>{this.addScore()}}
+                        loseLife = {()=>{this.loseLife()}}
+                        score = {this.state.score}
+                    />
+                </div>
             </div>
         );
     }
