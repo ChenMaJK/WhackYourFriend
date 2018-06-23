@@ -5,6 +5,7 @@ import Col from '../../src/_Position/_Col/Col';
 import Row from '../../src/_Position/_Row/Row';
 import Score from './_Score/Score';
 import Button from './_Button/Button';
+import { setTimeout } from 'timers';
 
 export default class PitArea extends Component {
     constructor(props){
@@ -52,18 +53,44 @@ export default class PitArea extends Component {
     readImg(){
         let url ;
 
-        var preview = document.querySelector('img');
+        // var preview = document.querySelector('img');
         var file    = document.querySelector('input[type=file]').files[0];
         var reader  = new FileReader();
       
         reader.addEventListener("load", function () {
-          preview.src = reader.result;
+        //   preview.src = reader.result;
+
+          let cvs = document.querySelector('canvas');
+          var ctx = cvs.getContext('2d');
+
+          let imgObj2 = new Image();
+          imgObj2.src = "./assert/panda.jpg";
+          imgObj2.onload = function(){
+            ctx.drawImage(imgObj2, 0, 0);
+            let imgObj = new Image();
+            imgObj.src = reader.result;
+            imgObj.onload = function(){
+                
+                ctx.drawImage(imgObj, 0, 0);//this即是imgObj,保持图片的原始大小：470*480
+                                // ctx.drawImage(this, 0, 0,1024,768);//改变图片的大小到1024*768
+            }
+          }
+
+
+
+          console.log(url)
         }, false);
+
+        // var canvas = document.createElement("canvas");
+        // canvas.width = preview.width;   
+        // canvas.height = preview.height;
+        // var ctx = canvas.getContext("2d");
+        // ctx.putImageData(imagedata, 0, 0)
 
         if (file) {
             url = reader.readAsDataURL(file);
         }
-      
+        console.log(url)
         // $('#picture').faceDetection({
         //     complete: function (faces) {
         //         console.log(faces);
@@ -74,7 +101,8 @@ export default class PitArea extends Component {
         return (
             <div >
                 <Row>
-                    <img id="picture" src=""/>>
+                    {/* <img id="picture" src=""/> */}
+                    <canvas>1</canvas>
                     <Col width="6" >
                         isBegin:{this.state.isBegin}
                     </Col>
