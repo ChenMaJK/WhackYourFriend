@@ -5,3 +5,9 @@
     box-sizing: border-box;
     border:solid  black 10px;
 }
+
+.rect{
+    border: solid #000000 2px;
+    position: absolute;
+    display: block;
+}

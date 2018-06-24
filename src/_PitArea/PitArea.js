@@ -18,6 +18,7 @@ export default class PitArea extends Component {
         }
         this.loseLife = this.loseLife.bind(this)
         this.addScore = this.addScore.bind(this)
+        this.getFace = this.getFace.bind(this)
     }
     addScore(){
         // this.setState({isWhack:1})
@@ -53,39 +54,57 @@ export default class PitArea extends Component {
     readImg(){
         let url ;
 
-        // var preview = document.querySelector('img');
+        var preview = document.querySelector('#picture');
         var file    = document.querySelector('input[type=file]').files[0];
         var reader  = new FileReader();
-      
-        reader.addEventListener("load", function () {
-        //   preview.src = reader.result;
+        reader.addEventListener("load",() => {
+            preview.src = reader.result;
 
-          let cvs = document.querySelector('canvas');
-          var ctx = cvs.getContext('2d');
+            let cvs = document.querySelector('canvas');
+            var ctx = cvs.getContext('2d');
 
-          let imgObj2 = new Image();
-          imgObj2.src = "./assert/panda.jpg";
-          imgObj2.onload = function(){
-            ctx.drawImage(imgObj2, 0, 0);
-            let imgObj = new Image();
-            imgObj.src = reader.result;
-            imgObj.onload = function(){
-                
-                ctx.drawImage(imgObj, 0, 0);//this即是imgObj,保持图片的原始大小：470*480
+    
+            let imgObj2 = new Image();
+            imgObj2.src = "./assert/panda.jpg";
+            imgObj2.onload = () => {
+                ctx.drawImage(imgObj2, 0, 0);
+                let imgObj = new Image();
+                imgObj.src = reader.result;
+                imgObj.onload = function(){
+                   
                                 // ctx.drawImage(this, 0, 0,1024,768);//改变图片的大小到1024*768
-            }
-          }
+                    $('#picture').faceDetection({
+                        complete: function (faces) {
+                            if (faces.length == 0) { //说明没有检测到人脸
+                                alert("无人脸")
+                            } else {
+                                console.log(faces)
+                                for (var i in faces) {
+                                    // this.draw(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
+                                    var rect = document.createElement('div');
+                                    document.querySelector('#test').appendChild(rect);
+                                    rect.classList.add('rect');
+                                    // rect.style.display = "block";
+                                    // rect.style.position = "absolute";
+                                    rect.style.width = faces[i].width + 'px';
+                                    rect.style.height = faces[i].height + 'px';
+                                    rect.style.left = (preview.offsetLeft + faces[i].x) + 'px';
+                                    rect.style.top = (preview.offsetTop + faces[i].y) + 'px';
 
+                                    ctx.drawImage( imgObj, (preview.offsetLeft + faces[i].x), (preview.offsetTop + faces[i].y),faces[i].width,faces[i].height);//this即是imgObj,保持图片的原始大小：470*480
+                                }
+                            }
+                        },
+                        error: function (code, message) {
+                            alert("complete回调函数出错"+message)
+                        }
+                    });
 
-
-          console.log(url)
+                    
+                }   
+            } 
+            // console.log(url)
         }, false);
-
-        // var canvas = document.createElement("canvas");
-        // canvas.width = preview.width;   
-        // canvas.height = preview.height;
-        // var ctx = canvas.getContext("2d");
-        // ctx.putImageData(imagedata, 0, 0)
 
         if (file) {
             url = reader.readAsDataURL(file);
@@ -97,12 +116,41 @@ export default class PitArea extends Component {
         //     }
         // });
     }
+    getFace(){
+        $('#picture').faceDetection({
+            complete: function (faces) {
+                if (faces.length == 0) { //说明没有检测到人脸
+                    alert("无人脸")
+                } else {
+                    console.log(faces)
+                    for (var i in faces) {
+                        // this.draw(faces[i].x, faces[i].y, faces[i].width, faces[i].height);
+                        var rect = document.createElement('div');
+                        document.querySelector('#test').appendChild(rect);
+                        rect.classList.add('rect');
+                        // rect.style.display = "block";
+                        // rect.style.position = "absolute";
+                        rect.style.width = faces[i].width + 'px';
+                        rect.style.height = faces[i].height + 'px';
+                        rect.style.left = (preview.offsetLeft + faces[i].x) + 'px';
+                        rect.style.top = (preview.offsetTop + faces[i].y) + 'px';
+                    }
+                }
+            },
+            error: function (code, message) {
+                alert("complete回调函数出错"+message)
+            }
+        });
+    }
     render() {
         return (
             <div >
+                <canvas></canvas>
                 <Row>
-                    {/* <img id="picture" src=""/> */}
-                    <canvas>1</canvas>
+                    <div id="test">
+                        <img id="picture" src=""/>
+                    </div>
+                    
                     <Col width="6" >
                         isBegin:{this.state.isBegin}
                     </Col>
