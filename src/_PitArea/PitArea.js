@@ -6,7 +6,7 @@ import Row from '../../src/_Position/_Row/Row';
 import Score from './_Score/Score';
 import Button from './_Button/Button';
 import { setTimeout } from 'timers';
-
+var exImg;
 export default class PitArea extends Component {
     constructor(props){
         super(props);
@@ -86,12 +86,46 @@ export default class PitArea extends Component {
                                     rect.classList.add('rect');
                                     // rect.style.display = "block";
                                     // rect.style.position = "absolute";
-                                    rect.style.width = faces[i].width + 'px';
-                                    rect.style.height = faces[i].height + 'px';
-                                    rect.style.left = (preview.offsetLeft + faces[i].x) + 'px';
-                                    rect.style.top = (preview.offsetTop + faces[i].y) + 'px';
+                                    let w = faces[i].width;
+                                    w-=w/10;
+                                    let h = faces[i].height;
+                                    h-=h/10;
 
-                                    ctx.drawImage( imgObj, (preview.offsetLeft + faces[i].x), (preview.offsetTop + faces[i].y),faces[i].width,faces[i].height);//this即是imgObj,保持图片的原始大小：470*480
+                                    let x = faces[i].x;
+                                    x+=w/10;
+                                    let y = faces[i].y;
+                                    y+=h/5;
+
+                                    rect.style.width = w + 'px';
+                                    rect.style.height = h + 'px';
+                                    rect.style.left = (preview.offsetLeft + x) + 'px';
+                                    rect.style.top = (preview.offsetTop + y) + 'px';
+                                    // ctx.drawImage( imgObj,faces[i].x+20 , faces[i].y,faces[i].width,faces[i].height,50,25,100,100);
+                                    ctx.drawImage( imgObj,x,y,w,h,55,40,90,90);
+                                    
+                                    // ctx.drawImage( imgObj,faces[i].x+20 , faces[i].y,faces[i].width,faces[i].height,50,25,100,100);
+                                    // ctx.drawImage( imgObj, (preview.offsetLeft + faces[i].x), (preview.offsetTop + faces[i].y),faces[i].width,faces[i].height);//this即是imgObj,保持图片的原始大小：470*480
+                                    var imgData =ctx.getImageData(0, 0, cvs.width, cvs.height);
+                                    var pxData = imgData.data;
+                                    console.log(pxData);
+                                    for(var i = 0; i < cvs.width * cvs.height; i++){
+                                        //灰度滤镜
+                                        var r = pxData[4*i+0];
+                                        var g = pxData[4*i+1];
+                                        var b = pxData[4*i+2];
+                                        //计算灰度的公式
+                                        var grey = 0.3*r + 0.59*g + 0.11*b;
+                                        if (grey<90){
+                                            grey=0;
+                                        }else{
+                                            grey=255;
+                                        }
+                                        pxData[4*i+0] = grey;
+                                        pxData[4*i+1] = grey;
+                                        pxData[4*i+2] = grey;
+                                        
+                                    }
+                                    ctx.putImageData(imgData, 0, 0);
                                 }
                             }
                         },
@@ -142,6 +176,7 @@ export default class PitArea extends Component {
             }
         });
     }
+    
     render() {
         return (
             <div >
