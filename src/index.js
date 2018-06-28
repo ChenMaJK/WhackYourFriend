@@ -7,6 +7,9 @@
 // );
 import React from 'react';
 import { render } from 'react-dom';
+
+import css from './index.css';
+
 import Col from '../src/_Position/_Col/Col';
 import Row from '../src/_Position/_Row/Row';
 
@@ -20,7 +23,7 @@ import Button from '../src/_PitArea/_Button/Button';
 render(
     <div >
         <Row>
-            <Col offset="2"width="8" >
+            <Col width="12"  >
                 <PitArea/>
             </Col>
         </Row>

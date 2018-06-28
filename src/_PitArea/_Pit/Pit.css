@@ -5,7 +5,9 @@
     margin: 5px;
 
     width:20%;
-
+    height: 20%;
+    max-width: 150px;
+    max-height: 150px;
     box-sizing: border-box;
     border:black solid 2px;
 

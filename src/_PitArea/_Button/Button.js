@@ -47,7 +47,7 @@ export default class Button extends Component {
                 <button 
                     onMouseEnter={this.onMouseEnter} 
                     onMouseLeave={this.onMouseLeave}
-                    class={this.state.class}
+                    class={this.state.class+" "}
                     onClick={this.props.click}
                 >
                     {this.props.children}

@@ -26,19 +26,28 @@ export default class EX extends Component {
         e.preventDefault();
 
         if(this.state.isShowEX){
+            this.props.sphering(e);
             this.props.addScore();
             this.props.showHint();
         }else{
+            console.log("lose")
             this.props.loseLife();
         }
     }
     render() {
         return (
-            <img
-            // src={man}
-            class ={"ex _"+this.state.isShowEX} 
-            onClick={(e) => this.handleClick(e)}
-            />
+            <div 
+                class="exDiv"
+                onClick={(e) => this.handleClick(e)}
+            >
+                <img
+                src={this.props.exUrl}
+                class ={"ex  _"+this.state.isShowEX} 
+                style = {{background:"exUrl"}}
+                
+                />
+            </div>
+
         );
     }
     random(){

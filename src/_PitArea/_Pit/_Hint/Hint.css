@@ -1,13 +1,28 @@
 .hint{
     position: absolute;
-    top:-30px;
-    width: 100px;
-    height: 30px;
-    background: red;
+    display: inline-block;
+    top:-2.5em;
+    /* width: 100px;
+    height: 30px; */
+    /* background: url('./hint.png') no-repeat ; */
+    background: white;
+    border: solid 5px #09F;
+    z-index: 1;
+}
+.trangle{
+    display:block; 
+    border-width:15px; 
+    position:absolute; 
+    bottom:-35px; 
+    left:0px;
+    border-style:solid dashed dashed; 
+    border-color:#09F transparent transparent;
+    font-size:0; 
+    line-height:0;
 }
 .yes{
-    display: block;
+    visibility: visible;
 }
 .no{
-    display: none;
+    visibility: hidden;
 }

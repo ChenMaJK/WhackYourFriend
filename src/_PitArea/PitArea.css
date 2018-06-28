@@ -1,10 +1,38 @@
+.show_window{
+    text-align: center;
+}
+
 .pitArea{
     flex-flow: row wrap;
+    position: relative;
     margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto;
+    /* width: 60%; */
+    /* padding-top:60%; */
+    max-width: 800px;
+    max-height: 800px;
 
     box-sizing: border-box;
     border:solid  black 10px;
 }
+
+
+.buttons{
+    margin-top: 50px;
+    float: left;
+}
+.buttons_length{
+    width: 100%;
+}
+/* .game_center{
+    text-align: center;
+} */
+.score_life_show{
+    margin-top: 50px;
+    float: right;
+}
+
 
 .rect{
     border: solid #000000 2px;

@@ -17,20 +17,33 @@ export default class Pit extends Component {
     changeSpeed(flag){
         this.refs.ex.changeSpeed(flag);
     }
+    handleClick(e){
+        e.preventDefault();
+    }
     render() {
         return (
-            <div class="pitBox">
-                <Hint ref="hint"/>
-                <EX 
-                    ref="ex" 
-                    isBegin={this.props.isBegin} 
-                    addScore = {()=>{this.props.addScore();this.changeSpeed(1)}}
-                    loseLife = {()=>{this.props.loseLife();this.changeSpeed(-1)}}
-                    showHint = {()=>{this.showHint()}}
-                    socre = {this.props.score}
-                />
-                <img class="pitImg" src="./assert/pit.png"/>
-            </div>
+            // <div class="pitPosition">
+                <div class="pitBox">
+                    <Hint ref="hint"/>
+                    <EX 
+                
+                        ref="ex" 
+                        isBegin={this.props.isBegin} 
+                        addScore = {()=>{this.props.addScore();this.changeSpeed(1)}}
+                        loseLife = {()=>{this.props.loseLife();this.changeSpeed(-1)}}
+                        showHint = {()=>{this.showHint()}}
+                        socre = {this.props.score}
+                        exUrl = {this.props.exUrl}
+                        sphering = {(e)=>{this.props.sphering(e)}}
+                    />
+                    <img 
+                        class="pitImg" 
+                        src="./assert/pit.png"
+                        onClick={(e)=>{this.handleClick(e)}}
+                    />
+                </div>
+            // </div>
+
 
         );
     }

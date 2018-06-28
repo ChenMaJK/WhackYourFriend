@@ -1,14 +1,26 @@
-.ex{
+.exDiv{
 
     width: 100%;
     padding-top: 100%;
     align-self: flex-start;
+    overflow: hidden;
 }
 ._0{
-    background: rgb(255, 255, 255);
+    /* background: rgb(255, 255, 255); */
+    visibility: hidden;
 }
 ._2{
     /* background: red; */
-    background: url("./man.jpg") no-repeat center;
-    background-size: auto 100%;
+    /* background: url("./man.jpg") no-repeat center;
+    background-size: auto 100%; */
+    visibility: visible;
+}
+.ex{
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    min-width: 100%;
+    min-height: 100%;
+    left: 0;
+    top:0;
 }
