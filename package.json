@@ -1,0 +1,32 @@
+{
+  "name": "yo_webpack_react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node webpack/dev-server --hot",
+    "s": "webpack-dev-server --content-base build --inline --hot",
+    "dev": "webpack-cli --config webpack/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bower-webpack-plugin": "^0.1.9",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "file-loader": "^1.1.11",
+    "open-browser-webpack-plugin": "0.0.5",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
+  }
+}
