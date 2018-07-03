@@ -17,19 +17,37 @@
     border:solid  black 10px;
 }
 
-
-.buttons{
-    margin-top: 50px;
-    float: left;
+.main_left{
+    height: 100%;
+    width: 100%;
+    background: #336699;
+    padding-bottom: 400px; 
 }
+.main_mid{
+    height: 100%;
+    width: 100%;
+    background: #ffffff;
+}
+.main_right{
+    padding-bottom: 400px; 
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #99cccc;
+}
+
+
+/* .buttons{
+    margin-top: 200px;
+    float: left;
+} */
 .buttons_length{
     width: 100%;
 }
-/* .game_center{
-    text-align: center;
-} */
+
 .score_life_show{
-    margin-top: 50px;
+    margin-top: 200px;
+    margin-right: 200px;
     float: right;
 }
 
@@ -38,4 +56,53 @@
     border: solid #000000 2px;
     position: absolute;
     display: block;
+}
+
+
+.file {
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #000000;
+    text-decoration: none;
+    text-indent: 0;
+    box-shadow: 5px 5px 5px #888888;
+    /* line-height: 20px; */
+}
+.file input {
+    position: absolute;
+    /* font-size: 40px; */
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: rgb(187,187,187);
+    border-color: #fff;
+    color: #000;
+    text-decoration: none;
+}
+
+.ex_show{
+    display: block;
+    margin-left:40px;
+}
+.img_preview{
+
+    margin-left:40px;
+}
+.expression{
+    display: block;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.scroe_1{
+/* position: absolute;
+bottom: 800px;
+right: 300px; */
+    margin-left: 40px;
 }
